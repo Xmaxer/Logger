@@ -1,0 +1,35 @@
+{
+  "name": "@baselinecode/logger",
+  "version": "1.0.2",
+  "description": "A logging utility for development and debugging",
+  "homepage": "https://github.com/Xmaxer/Logger",
+  "repository": "https://github.com/Xmaxer/Logger",
+  "license": "MIT",
+  "author": "Kevin Jakubauskas",
+  "exports": "./src/index.js",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "ts-node ./scripts/build.ts",
+    "lint": "baseline && git add .",
+    "lint:ci": "baseline -r",
+    "publish": "cd ./dist && npm publish"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "chalk": "4.1.2",
+    "dayjs": "1.11.1"
+  },
+  "devDependencies": {
+    "@baselinecode/baseline": "1.0.3",
+    "@baselinecode/eslint-config-baseline": "1.0.3",
+    "@types/node": "17.0.31",
+    "pre-commit": "1.2.2",
+    "ts-node": "10.7.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
